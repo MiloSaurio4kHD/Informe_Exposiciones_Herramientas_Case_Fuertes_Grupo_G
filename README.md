@@ -1,0 +1,1 @@
+# Informe_Exposiciones_Herramientas_Case_Fuertes_Grupo_G
