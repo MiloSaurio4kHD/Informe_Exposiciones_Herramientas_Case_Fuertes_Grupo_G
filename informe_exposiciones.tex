@@ -1,0 +1,221 @@
+% ============================================================
+%  Informe individual: Exposiciones de compañeros
+%  Herramientas CASE (MDD: UML -> Codigo) -- MundiPets
+%  Ingenieria de Requisitos -- UTEQ 2026-2027 PPA
+%  Formato: IEEE onecolumn
+% ============================================================
+\documentclass[journal,onecolumn]{IEEEtran}
+
+% ── Codificacion e idioma ───────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[autostyle=true, spanish=mexican]{csquotes}
+\usepackage[htt]{hyphenat}
+
+% ── Tablas ──────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\thetable}{\arabic{table}}
+\def\tablename{Tabla}
+
+% ── Figuras ─────────────────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{float}
+
+% ── Color ───────────────────────────────────────────────────
+\usepackage{xcolor}
+
+% ── Geometria ───────────────────────────────────────────────
+\usepackage{geometry}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% ── Encabezado y pie ────────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small Informe de exposiciones -- Ingenieria en Requerimientos}
+\fancyhead[R]{\small Herramientas CASE}
+\fancyfoot[C]{\thepage}
+
+% ── Espaciado y listas ──────────────────────────────────────
+\usepackage{parskip}
+\setlength{\parskip}{4pt}
+\makeatletter
+\@ifundefined{labelindent}{}{\let\labelindent\relax}
+\makeatother
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+% ── Titulos de seccion ──────────────────────────────────────
+\usepackage{titlesec}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% ── Leyendas ────────────────────────────────────────────────
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf}
+
+% ── Enlaces ─────────────────────────────────────────────────
+\usepackage[hidelinks,colorlinks=false]{hyperref}
+
+\begin{document}
+	\begin{titlepage}
+		\centering
+		
+		{\large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO\\[12pt]}
+		
+		\includegraphics[width=0.2\textwidth]{logo_uteq.png}\\[12pt]
+		
+		{\large\bfseries FACULTAD DE CIENCIAS DE LA COMPUTACIÓN Y DISEÑO DIGITAL\\[4pt]
+			CARRERA DE INGENIERÍA EN SOFTWARE}
+		
+		\vspace{0.5cm}
+		
+		{\normalsize\bfseries TEMA:}\\[4pt]
+		{\normalsize INFORME INDIVIDUAL DE LAS EXPOSICIONES: HERRAMIENTAS CASE PARA GENERACIÓN DE CÓDIGO (MDD)}\\[4pt]
+		\vspace{0.5cm}
+		
+		{\normalsize\bfseries MATERIA:}\\[4pt]
+		{\normalsize INGENIERÍA EN REQUERIMIENTOS}
+		
+		\vspace{0.5cm}
+		
+		{\normalsize\bfseries DOCENTE:}\\[4pt]
+		{\normalsize ING. GUERRERO ULLOA GLEISTON CICERÓN, PhD.}
+		
+		\vspace{0.5cm}
+		
+		{\normalsize\bfseries ESTUDIANTE:}\\[6pt]
+		\textit{\textbf{FUERTES ARRAES EDSON DANIEL}},~CI: 0929115087,~Correo: efuertesa2@uteq.edu.ec\\
+		
+		\vspace{0.5cm}
+		
+		{\normalsize\bfseries CURSO:}\\[4pt]
+		{\normalsize CUARTO SEMESTRE INGENIERÍA EN SOFTWARE \enquote{B}}
+		
+		\vspace{1cm}
+		
+		\quad\textbf{Repositorio GitHub:}\\
+		\url{https://github.com/MiloSaurio4kHD/Informe_Exposiciones_Herramientas_Case_Fuertes_Grupo_G}
+		
+		\vspace{0.5cm}
+		
+		{\normalsize\bfseries QUEVEDO -- LOS RÍOS -- ECUADOR}\\[4pt]
+		{\normalsize\bfseries 2026 -- 2027 PPA}
+		
+	\end{titlepage}
+	
+	\tableofcontents
+	\newpage
+	\listoftables
+	\newpage
+	
+	% ============================================================
+	% 1. INTRODUCCIÓN
+	% ============================================================
+	\section{Introducción}
+	
+	El presente informe recoge, de forma individual, lo observado durante las exposiciones de los distintos equipos sobre herramientas CASE aplicadas al desarrollo dirigido por modelos (MDD), es decir, a la generación de código fuente a partir de diagramas UML. Cada equipo presentó una herramienta diferente y demostró, sobre el proyecto MundiPets, el ciclo de modelar un diagrama de clases y obtener a partir de él el esqueleto del código. El objetivo del documento es dejar constancia de las características técnicas de cada herramienta, del procedimiento demostrado en vivo y de las observaciones más relevantes sobre sus ventajas y limitaciones.
+	
+	% ============================================================
+	% 2. GRUPO E -- MODELIO
+	% ============================================================
+	\section{Grupo E -- Modelio}
+	
+	\textbf{Expositores:} Nieves Jimmy y Morales Gary. \quad \textbf{Sistema:} MundiPets.
+	
+	\subsection{Descripción de la herramienta}
+	
+	Nieves explicó que Modelio es una herramienta para desarrolladores y de código abierto. Morales complementó indicando que trabaja sobre UML, es compatible con UML2 y permite construir diagramas de clase y máquinas de estado, además de ser compatible con BPMN y ArchiMate. Señaló que Modelio depende de una clase para compilar sus códigos y que no es una inteligencia artificial, por lo que no corrige por sí sola los errores de UML; tampoco permite crear diagramas de perfil. Mencionó también que trae por defecto Java Classic y que la generación de código se realiza clase por clase.
+	
+	\subsection{Demostración}
+	
+	En la parte demostrativa, Nieves abrió Modelio y creó un proyecto. Para generar código a través de la clase se accede al apartado de módulo y, al crear un diagrama, se elige entre los distintos tipos disponibles el de clase. Allí aparecen diversos componentes: se arrastra el \textit{class model} al área de trabajo y en ese mismo espacio se añaden atributos y métodos. Al dar clic sobre la clase se pueden modificar propiedades como el nombre de la clase y sus atributos; de la misma forma se agregan las operaciones y las relaciones entre clases.
+	
+	A continuación, Morales mostró que para generar código se da clic derecho sobre una clase y se selecciona \textit{Java element}, marcando así que la clase puede generar código Java, procedimiento que debe repetirse clase por clase. Con clic derecho sobre la clase aparece la opción \textit{Java designer}, desde donde se realiza la generación. Luego se busca el directorio donde se guardó la clase, en la ruta \\ \texttt{C:\textbackslash usuarios\textbackslash miusuario\textbackslash modelio\textbackslash nombreproyecto\textbackslash src\textbackslash}, y se abre en el bloc de notas para ver el código. El mismo procedimiento se aplica al diagrama de clases del módulo de MundiPets.
+	
+	\subsection{Observaciones}
+	
+	Los expositores indicaron que el \textit{roundtrip} no funciona de forma correcta porque el programa es muy antiguo, pero que las clases generadas se ejecutan sin problema en IntelliJ IDEA.
+	
+	% ============================================================
+	% 3. GRUPO H -- BOUML
+	% ============================================================
+	\section{Grupo H -- BOUML}
+	
+	\textbf{Expositores:} Chavarría, Mendoza y Sánchez Cornejo. \quad \textbf{Sistema:} MundiPets.
+	
+	\subsection{Descripción de la herramienta}
+	
+	Chavarría explicó por qué el equipo eligió esta herramienta y qué iban a realizar, mencionando que utilizaron C++ para la generación de código. Mendoza describió el subsistema del diagrama UML de MundiPets, que contiene varias clases como Usuario, Propietario, Veterinario, Mascota e Historial Médico, con sus atributos y operaciones, además de la visibilidad y la multiplicidad. Señaló que BOUML permite ingeniería inversa, generación de código y trabajo multiplataforma, transformando diagramas UML a varios lenguajes como C++, C, Java, Python, PHP y SQL; añadió que tiene una interfaz sencilla y es de código abierto.
+	
+	Sánchez matizó estas ventajas señalando limitaciones: la interfaz resulta poco intuitiva, la curva de aprendizaje es pronunciada y no posee documentación accesible. La generación de código es parcial, ya que solo genera las partes de la clase pero no las estructuras como tales; el trabajo con frameworks y bases de datos es manual. Advirtió además sobre una regeneración delicada, pues si se modifica y se vuelve a generar el código se elimina lo trabajado en esa clase. Concluyó que es gratuito pero cuenta con una comunidad desactualizada.
+	
+	\subsection{Demostración}
+	
+	Mendoza mostró que para generar un proyecto se abre BOUML y se pulsa \textit{New}, se selecciona la ruta y se guarda, con lo que se crea la carpeta con todos los archivos del proyecto (lenguaje, estereotipos, etc.). Para crear un diagrama se da clic derecho al proyecto en BOUML y se crea el diagrama de clases; luego se selecciona la vista creada y se crea el diagrama, que se abre con doble clic. En la parte superior están todas las opciones: para crear una clase se selecciona \textit{class} y se le asigna un nombre. Para crear un atributo se agrega y se le indica el nombre, y opcionalmente el tipo de dato y la privacidad. Para ver el tipo de dato y el valor que reporta, en \textit{drawing settings}, dentro de \textit{diagram}, se configura que no se oculten los atributos de las clases; de igual forma se puede agregar un estereotipo. Para relacionar clases, el menú superior contiene las relaciones de UML.
+	
+	Para generar código se da clic derecho a la vista de clases y, en \textit{edit}, se crea un \textit{Source artefact}, procedimiento que se repite clase por clase, tras lo cual el código puede observarse en la carpeta. Finalmente se abre la terminal PowerShell, se navega a la carpeta y se ejecuta el \texttt{.exe} generado por BOUML.
+	
+	Chavarría demostró la edición: para editar un atributo de una clase se da clic derecho sobre el atributo y se edita, o se agrega un nuevo atributo, y se añade un operador o método. Al guardar se observa que las cuatro clases fueron actualizadas y, en la carpeta generada por Mendoza, se ejecuta el comando para ver reflejado lo creado en las clases.
+	
+	% ============================================================
+	% 4. GRUPO D -- POWER DESIGNER
+	% ============================================================
+	\section{Grupo D -- Power Designer}
+	
+	\textbf{Expositor:} Contreras Kevin. \quad \textbf{Herramienta CASE:} Power Designer.
+	
+	\subsection{Descripción de la herramienta}
+	
+	Contreras Kevin explicó que Power Designer no se centra tanto en el modelado, sino en la conexión de los modelos.
+	
+	\subsection{Demostración}
+	
+	Primero creó el proyecto y explicó los diferentes diagramas que permite modelar Power Designer. Para la demostración seleccionó el diagrama de clases, en el cual creó las clases —como la clase Usuario con todas sus propiedades— y les agregó atributos y operaciones. Luego pasó a un diagrama que ya tenía modelado y lo exportó a código SQL, mostró el código generado en SQL Server y lo ejecutó para que se crearan las tablas.
+	
+	% ============================================================
+	% 5. CUADRO COMPARATIVO
+	% ============================================================
+	\section{Cuadro comparativo de las herramientas}
+	
+	La Tabla~\ref{tab:comparativo} resume las herramientas presentadas por los distintos equipos, según lo observado en cada exposición.
+	
+	\begin{table}[H]
+		\caption{Comparación de las herramientas CASE expuestas.}
+		\label{tab:comparativo}
+		\centering
+		\begin{tabularx}{\linewidth}{|L{2.2cm}|L{2.3cm}|X|X|}
+			\hline
+			\textbf{Herramienta} & \textbf{Lenguaje demostrado} & \textbf{Fortalezas observadas} & \textbf{Limitaciones observadas} \\
+			\hline
+			\textbf{Modelio} & Java & Código abierto; compatible con UML2, BPMN y ArchiMate; clases ejecutables en IntelliJ IDEA. & Generación clase por clase; \textit{roundtrip} no funciona bien por ser un programa antiguo; no crea diagramas de perfil. \\
+			\hline
+			\textbf{BOUML} & C++ & Código abierto y gratuito; multiplataforma; genera a C++, C, Java, Python, PHP y SQL; permite ingeniería inversa. & Interfaz poco intuitiva; curva de aprendizaje pronunciada; generación parcial; regeneración delicada (borra lo trabajado); comunidad desactualizada. \\
+			\hline
+			\textbf{Power Designer} & SQL & Orientada a la conexión de modelos; exporta a SQL y ejecuta la creación de tablas en SQL Server. & Menor énfasis en el modelado según lo expuesto. \\
+			\hline
+		\end{tabularx}
+	\end{table}
+	
+	% ============================================================
+	% 6. CONCLUSIONES
+	% ============================================================
+	\section{Conclusiones}
+	
+	Las exposiciones evidenciaron que, si bien todas las herramientas comparten el propósito de generar código a partir de modelos UML, difieren notablemente en cobertura de lenguajes, facilidad de uso y calidad del ciclo de sincronización modelo--código. Modelio y BOUML coinciden en ser opciones de código abierto orientadas a UML, aunque ambas realizan la generación clase por clase y presentan limitaciones en el \textit{roundtrip} y la regeneración. Power Designer se distingue por su enfoque hacia la conexión de modelos y la generación directa de esquemas SQL ejecutables. En conjunto, las demostraciones permitieron comparar distintos enfoques de MDD sobre un mismo caso —MundiPets— y reconocer que la elección de la herramienta depende del lenguaje objetivo, del alcance del proyecto y del nivel de personalización requerido en la salida generada.
+	
+\end{document}
