@@ -135,7 +135,49 @@
 	El presente informe recoge, de forma individual, lo observado durante las exposiciones de los distintos equipos sobre herramientas CASE aplicadas al desarrollo dirigido por modelos (MDD), es decir, a la generación de código fuente a partir de diagramas UML. Cada equipo presentó una herramienta diferente y demostró, sobre el proyecto MundiPets, el ciclo de modelar un diagrama de clases y obtener a partir de él el esqueleto del código. El objetivo del documento es dejar constancia de las características técnicas de cada herramienta, del procedimiento demostrado en vivo y de las observaciones más relevantes sobre sus ventajas y limitaciones.
 	
 	% ============================================================
-	% 2. GRUPO E -- MODELIO
+	% 2. GRUPO A -- UMBRELLO
+	% ============================================================
+	\section{Grupo A -- Umbrello}
+	
+	\textbf{Expositores:} Esther Muñoz, Frixon Morán y Ángelo Zambrano. \quad \textbf{Herramienta CASE:} Umbrello.
+	
+	\subsection{Descripción de la herramienta}
+	
+	Esther Muñoz explicó qué es Umbrello, mencionando que es de código abierto, que soporta varios tipos de diagramas UML y que está disponible para Windows y Linux. Frixon Morán explicó cómo Umbrello convierte un modelo a código y expuso los lenguajes a los que se puede generar. Por su parte, Ángelo Zambrano habló sobre las ventajas que brinda la herramienta, como su carácter de código abierto y el soporte de múltiples lenguajes, y detalló sus fortalezas y limitaciones.
+	
+	\subsection{Demostración}
+	
+	En su demostración, Esther Muñoz creó una clase con sus atributos y métodos, y explicó cómo crear un estereotipo y agregarlo a las clases, además de cómo relacionar las clases y manejar las multiplicidades. Frixon Morán, en la parte práctica, mostró cómo crear una clase con todos sus atributos y métodos.
+	
+	Ángelo Zambrano abrió otro proyecto con el diagrama completo y explicó cómo generar código a partir del modelo: seleccionó el modelo, modificó las configuraciones del generador, seleccionó las clases a generar y ejecutó la generación. Posteriormente creó un proyecto en Visual Studio y agregó las clases generadas.
+	
+	% ============================================================
+	% 3. GRUPO B -- STARUML
+	% ============================================================
+	\section{Grupo B -- StarUML}
+	
+	\textbf{Expositores:} Génesis Gutiérrez, Mayra Córdova y Anderson Naranjo. \quad \textbf{Sistema:} MundiPets.
+	
+	\subsection{Marco conceptual expuesto}
+	
+	Génesis Gutiérrez introdujo el concepto de herramientas CASE, definiéndolas como software diseñado para automatizar y facilitar la documentación de software. A continuación presentó los conceptos clave, paradigmas y arquitecturas del desarrollo dirigido por modelos, señalando que MDE es el enfoque más amplio, en el cual todos los modelos se centran en el proceso de software; que en MDD los modelos generan el sistema; y que MDA separa el diseño conceptual de la lógica de negocio. Explicó además las transformaciones M2M, entendidas como la conversión automática entre diferentes tipos de modelos, y M2T, como la traducción del diagrama a código.
+	
+	Anderson Naranjo expuso las técnicas de ingeniería asociadas: \textit{forward engineering}, o generación de código a partir del modelo; \textit{reverse engineering}, o creación de diagramas desde código existente; y \textit{round-trip}, que sincroniza de forma bidireccional, de modo que si se modifica uno se refleja en el otro. Respecto de la herramienta, indicó que la arquitectura de StarUML está basada sobre Node.js y Electron, lo que permite usar extensiones para adaptarse a cualquier lenguaje y la convierte en una aplicación flexible.
+	
+	\subsection{Ventajas y limitaciones}
+	
+	Mayra Córdova detalló las ventajas de StarUML: interfaz intuitiva y ágil, soporte superior en métodos M2T que facilita al usuario el seguimiento del proyecto, extensiones que permiten usar cualquier lenguaje y alineación al estándar UML 2.x.
+	
+	Entre las limitaciones señaló que se necesita una licencia para las opciones más avanzadas, que son obligatorios ciertos ajustes manuales, ya que requiere participación del usuario para realizar los diagramas o corregir detalles, que presenta un alto consumo de recursos del sistema operativo y que las extensiones pueden llegar a fallar.
+	
+	\subsection{Demostración}
+	
+	Génesis Gutiérrez presentó la aplicación al PFC MundiPets, delimitada al módulo de solicitud de adopción. En la demostración en vivo creó un nuevo proyecto y, en la carpeta \textit{model} a la derecha, mediante clic derecho creó un nuevo diagrama de clases. A la izquierda se encuentran los elementos para diagramar: agregó una clase, le asignó un nombre y le añadió atributos y métodos; luego añadió otra clase que completó de la misma forma. A continuación estableció las relaciones, agregó las cardinalidades y asignó nombres a las relaciones para entender mejor el flujo de trabajo.
+	
+	Para pasar el diagrama a código, ingresó a \textit{Tools} y luego a \textit{Extension Manager}, donde instaló la extensión de C\#; tras ello, en \textit{Tools} aparece la opción C\#. Al seleccionarla, eligió la carpeta \textit{model} y la ruta del proyecto de Visual Studio 2022, y agregó las clases como elemento existente dentro de Visual Studio 2022. Finalmente señaló que es necesario realizar ajustes manuales debido a las limitaciones de StarUML.
+	
+	% ============================================================
+	% 4. GRUPO E -- MODELIO
 	% ============================================================
 	\section{Grupo E -- Modelio}
 	
@@ -156,7 +198,7 @@
 	Los expositores indicaron que el \textit{roundtrip} no funciona de forma correcta porque el programa es muy antiguo, pero que las clases generadas se ejecutan sin problema en IntelliJ IDEA.
 	
 	% ============================================================
-	% 3. GRUPO H -- BOUML
+	% 5. GRUPO H -- BOUML
 	% ============================================================
 	\section{Grupo H -- BOUML}
 	
@@ -177,7 +219,7 @@
 	Chavarría demostró la edición: para editar un atributo de una clase se da clic derecho sobre el atributo y se edita, o se agrega un nuevo atributo, y se añade un operador o método. Al guardar se observa que las cuatro clases fueron actualizadas y, en la carpeta generada por Mendoza, se ejecuta el comando para ver reflejado lo creado en las clases.
 	
 	% ============================================================
-	% 4. GRUPO D -- POWER DESIGNER
+	% 6. GRUPO D -- POWER DESIGNER
 	% ============================================================
 	\section{Grupo D -- Power Designer}
 	
@@ -192,7 +234,7 @@
 	Primero creó el proyecto y explicó los diferentes diagramas que permite modelar Power Designer. Para la demostración seleccionó el diagrama de clases, en el cual creó las clases —como la clase Usuario con todas sus propiedades— y les agregó atributos y operaciones. Luego pasó a un diagrama que ya tenía modelado y lo exportó a código SQL, mostró el código generado en SQL Server y lo ejecutó para que se crearan las tablas.
 	
 	% ============================================================
-	% 5. CUADRO COMPARATIVO
+	% 7. CUADRO COMPARATIVO
 	% ============================================================
 	\section{Cuadro comparativo de las herramientas}
 	
@@ -206,6 +248,10 @@
 			\hline
 			\textbf{Herramienta} & \textbf{Lenguaje demostrado} & \textbf{Fortalezas observadas} & \textbf{Limitaciones observadas} \\
 			\hline
+			\textbf{Umbrello} & C\# (integrado en Visual Studio) & Código abierto; soporta varios tipos de diagramas UML; disponible para Windows y Linux; admite múltiples lenguajes; generador configurable. & Requiere configurar el generador y seleccionar manualmente las clases antes de generar. \\
+			\hline
+			\textbf{StarUML} & C\# (extensión, hacia Visual Studio 2022) & Interfaz intuitiva y ágil; soporte superior en M2T; extensiones para cualquier lenguaje; alineación a UML 2.x; arquitectura sobre Node.js y Electron. & Licencia necesaria para opciones avanzadas; ajustes manuales obligatorios; alto consumo de recursos; las extensiones pueden fallar. \\
+			\hline
 			\textbf{Modelio} & Java & Código abierto; compatible con UML2, BPMN y ArchiMate; clases ejecutables en IntelliJ IDEA. & Generación clase por clase; \textit{roundtrip} no funciona bien por ser un programa antiguo; no crea diagramas de perfil. \\
 			\hline
 			\textbf{BOUML} & C++ & Código abierto y gratuito; multiplataforma; genera a C++, C, Java, Python, PHP y SQL; permite ingeniería inversa. & Interfaz poco intuitiva; curva de aprendizaje pronunciada; generación parcial; regeneración delicada (borra lo trabajado); comunidad desactualizada. \\
@@ -216,10 +262,12 @@
 	\end{table}
 	
 	% ============================================================
-	% 6. CONCLUSIONES
+	% 8. CONCLUSIONES
 	% ============================================================
 	\section{Conclusiones}
 	
-	Las exposiciones evidenciaron que, si bien todas las herramientas comparten el propósito de generar código a partir de modelos UML, difieren notablemente en cobertura de lenguajes, facilidad de uso y calidad del ciclo de sincronización modelo--código. Modelio y BOUML coinciden en ser opciones de código abierto orientadas a UML, aunque ambas realizan la generación clase por clase y presentan limitaciones en el \textit{roundtrip} y la regeneración. Power Designer se distingue por su enfoque hacia la conexión de modelos y la generación directa de esquemas SQL ejecutables. En conjunto, las demostraciones permitieron comparar distintos enfoques de MDD sobre un mismo caso —MundiPets— y reconocer que la elección de la herramienta depende del lenguaje objetivo, del alcance del proyecto y del nivel de personalización requerido en la salida generada.
+	Las exposiciones evidenciaron que, si bien todas las herramientas comparten el propósito de generar código a partir de modelos UML, difieren notablemente en cobertura de lenguajes, facilidad de uso y calidad del ciclo de sincronización modelo--código. Modelio y BOUML coinciden en ser opciones de código abierto orientadas a UML, aunque ambas realizan la generación clase por clase y presentan limitaciones en el \textit{roundtrip} y la regeneración. Umbrello, también de código abierto y multiplataforma, mostró un flujo de generación configurable cuya salida se integró directamente en un proyecto de Visual Studio. StarUML destacó por su interfaz y su modelo de extensiones sobre Node.js y Electron, que le permite generar hacia prácticamente cualquier lenguaje, aunque a costa de licencia para funciones avanzadas, mayor consumo de recursos y ajustes manuales posteriores. Power Designer se distingue por su enfoque hacia la conexión de modelos y la generación directa de esquemas SQL ejecutables.
+	
+	Un punto transversal a casi todas las demostraciones fue que ninguna herramienta entrega código listo para producción: todas generan el esqueleto estructural —atributos, firmas de métodos y relaciones— y dejan la lógica y los ajustes finales al desarrollador. Asimismo, el grado de soporte del ciclo \textit{round-trip} resultó ser el criterio que más diferencia a unas de otras. En conjunto, las demostraciones permitieron comparar distintos enfoques de MDD sobre un mismo caso —MundiPets— y reconocer que la elección de la herramienta depende del lenguaje objetivo, del alcance del proyecto y del nivel de personalización requerido en la salida generada.
 	
 \end{document}
