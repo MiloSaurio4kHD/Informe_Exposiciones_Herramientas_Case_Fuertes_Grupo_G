@@ -1,44 +1,75 @@
-# Informe — Exposición-demostración MDD (UML → Código)
+# Informe Individual — Exposiciones de Herramientas CASE (MDD)
 
-Documento que evidencia el ciclo completo de **Desarrollo Dirigido por Modelos (MDD)** aplicado al PFC **MundiPets**, usando la herramienta CASE **Visual Paradigm** para generar código C# a partir de un diagrama de clases UML.
+**Universidad Técnica Estatal de Quevedo (UTEQ)**
+Facultad de Ciencias de la Computación y Diseño Digital — Carrera de Ingeniería en Software
 
-## ¿De qué trata?
+| | |
+|---|---|
+| **Materia** | Ingeniería en Requerimientos |
+| **Docente** | Ing. Guerrero Ulloa Gleiston Cicerón, PhD. |
+| **Estudiante** | Fuertes Arraes Edson Daniel — CI: 0929115087 — efuertesa2@uteq.edu.ec |
+| **Curso** | Cuarto Semestre Ingeniería en Software "B" |
+| **PFC** | MundiPets |
+| **Periodo** | 2026 – 2027 PPA |
 
-El documento demuestra, de principio a fin, cómo se pasa de un modelo UML a código fuente funcional sobre un subsistema real de MundiPets: la **gestión del perfil de mascota y validación de información médica**.
+---
 
-## Contenido
+## Descripción
 
-- **Marco teórico:** explica los fundamentos de MDE, MDA (niveles CIM, PIM, PSM), MDD, las transformaciones modelo-a-modelo y modelo-a-texto, los perfiles UML y la ingeniería de ida y vuelta (round-trip).
+Informe **individual** que documenta lo observado durante las exposiciones de los distintos equipos sobre **herramientas CASE aplicadas al Desarrollo Dirigido por Modelos (MDD)**, es decir, la generación de código fuente a partir de diagramas UML.
 
-- **Justificación de la herramienta:** argumenta por qué se eligió Visual Paradigm frente a alternativas como Enterprise Architect, considerando cobertura de lenguajes, plantillas editables y licencia.
+Cada equipo presentó una herramienta distinta y demostró en vivo, sobre el proyecto **MundiPets**, el ciclo de modelar un diagrama de clases y obtener a partir de él el esqueleto del código.
 
-- **Descripción del subsistema:** delimita el módulo modelado, sus actores, requisitos funcionales y alcance.
+## Contenido del informe
 
-- **Modelo UML de origen:** presenta el diagrama de clases (8 clases del dominio y 2 enumeraciones con el estereotipo «Entity») y el perfil UML con estereotipos y valores etiquetados.
+| Sección | Contenido |
+|---|---|
+| 1 | Introducción |
+| 2 | Grupo A — Umbrello |
+| 3 | Grupo B — StarUML |
+| 4 | Grupo E — Modelio |
+| 5 | Grupo H — BOUML |
+| 6 | Grupo D — Power Designer |
+| 7 | Cuadro comparativo de las herramientas |
+| 8 | Conclusiones |
 
-- **Configuración y generación:** documenta cómo se configuró el Instant Generator, las plantillas Apache Velocity utilizadas, y el proceso de generación del código C#.
+## Herramientas documentadas
 
-- **Verificación:** comprueba la correspondencia entre el modelo y el código generado, con una tabla de trazabilidad y las limitaciones detectadas del generador.
+| Grupo | Herramienta | Expositores | Lenguaje demostrado |
+|---|---|---|---|
+| A | Umbrello | Esther Muñoz, Frixon Morán, Ángelo Zambrano | C# (Visual Studio) |
+| B | StarUML | Génesis Gutiérrez, Mayra Córdova, Anderson Naranjo | C# (Visual Studio 2022) |
+| E | Modelio | Nieves Jimmy, Morales Gary | Java (IntelliJ IDEA) |
+| H | BOUML | Chavarría, Mendoza, Sánchez Cornejo | C++ |
+| D | Power Designer | Contreras Kevin | SQL (SQL Server) |
 
-- **Cierre del ciclo (roundtrip):** evidencia que un cambio en el modelo (agregar el atributo `peso` a la clase Mascota) se refleja en el código al regenerar.
+## Estructura del repositorio
 
-- **Reparto del trabajo y conclusiones.**
+```
+.
+├── README.md
+├── informe_exposiciones.tex     # Documento fuente LaTeX
+├── informe_exposiciones.pdf     # Documento compilado
+└── figuras/
+    └── logo_uteq.png            # Logo institucional (requerido por la portada)
+```
 
-- **Anexos:** estructura del repositorio, tabla de mapeo completa modelo→código, los códigos completos de las 10 clases generadas e instrucciones de reproducibilidad.
+## Compilación
 
-## Sistema de aplicación
+El documento usa la clase `IEEEtran` (formato *journal*, una columna) y no requiere bibliografía externa.
 
-**MundiPets** — plataforma orientada a centralizar perfiles de mascotas y apoyar procesos de adopción y cruza responsable, correspondiente al Proyecto Fin de Curso del equipo.
+```bash
+pdflatex informe_exposiciones.tex
+pdflatex informe_exposiciones.tex   # segunda pasada: índice y lista de tablas
+```
 
-## Herramientas utilizadas
+### Requisitos
 
-- **Visual Paradigm 17.3** — modelado UML y generación de código (Instant Generator)
-- **C#** — lenguaje objetivo del código generado
-- **Visual Studio 2022** — compilación y ejecución
-- **LaTeX** — elaboración del documento
+- Distribución LaTeX (TeX Live, MiKTeX o Overleaf)
+- Paquetes: `IEEEtran`, `babel` (spanish), `csquotes`, `booktabs`, `tabularx`, `array`, `multirow`, `longtable`, `graphicx`, `float`, `xcolor`, `geometry`, `fancyhdr`, `parskip`, `enumitem`, `amssymb`, `titlesec`, `caption`, `hyperref`
+- El archivo `figuras/logo_uteq.png` debe existir para que compile la portada
 
-## Equipo
+## Notas
 
-- Fuertes Arraes Edson Daniel — Líder e integrador (modelado UML y generación de código)
-- Cedeño Avila Winston Damian — Marco teórico, descripción del subsistema y conclusiones
-- Cedeño Coronado Wilson Lizandro — Justificación de la herramienta MDD
+- El informe es de carácter **individual**; recoge únicamente las observaciones del autor sobre las exposiciones de los demás equipos.
+- Los procedimientos descritos corresponden a lo demostrado en vivo por cada grupo, no a pruebas realizadas por el autor.
