@@ -50,8 +50,7 @@ Cada equipo presentó una herramienta distinta y demostró en vivo, sobre el pro
 ├── README.md
 ├── informe_exposiciones.tex     # Documento fuente LaTeX
 ├── informe_exposiciones.pdf     # Documento compilado
-└── figuras/
-    └── logo_uteq.png            # Logo institucional (requerido por la portada)
+└── logo_uteq.png                # Logo institucional (requerido por la portada)
 ```
 
 ## Compilación
@@ -67,7 +66,7 @@ pdflatex informe_exposiciones.tex   # segunda pasada: índice y lista de tablas
 
 - Distribución LaTeX (TeX Live, MiKTeX o Overleaf)
 - Paquetes: `IEEEtran`, `babel` (spanish), `csquotes`, `booktabs`, `tabularx`, `array`, `multirow`, `longtable`, `graphicx`, `float`, `xcolor`, `geometry`, `fancyhdr`, `parskip`, `enumitem`, `amssymb`, `titlesec`, `caption`, `hyperref`
-- El archivo `figuras/logo_uteq.png` debe existir para que compile la portada
+- El archivo `logo_uteq.png` debe estar en la misma carpeta que el `.tex` para que compile la portada
 
 ## Notas
 
